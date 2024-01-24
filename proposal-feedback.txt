@@ -1,0 +1,32 @@
+
+
+Evaluation and Feedback
+CMSI 4072 project ~ Spring 2024
+Anna Garren and Erin Hurlburt
+FlickPick project
+==============================
+
+Proposal Document:
+------------------
+   Good work on the proposal document, although not having a file extention
+   like '.txt' or something I kinda had to wing it.  I got it though...
+   The description is very complete and documents the way the user will run
+   the application quite well.
+
+   In the justification section, you talk about web development and stress
+   the challenging nature of the project being balance with your self-
+   reflectiveness of knowing your own limitations of putting the project
+   together.  I agree: 'win-win'!
+
+Proposal Presentation:
+----------------------
+   Nice job on the presentation!  Making the slides look like a theater was
+   a great idea ~ eye-catching and a good way to highlight your work.  You
+   did well describing your project, and you engaged the audience and made
+   good eye contact.  You answered the questions well, too.
+
+
+=============================================================================
+your score:  5% out of 5% which is an A-plus
+
+Great job on this presentation and proposal and great start to the semester!
