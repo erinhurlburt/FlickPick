@@ -2,7 +2,7 @@ import React from 'react';
 import './HomeView.css';
 
 
-export function HomeView({}) {
+export function HomeView() {
     return (
         <div>
             <h2>Home View!</h2>

@@ -5,9 +5,9 @@ import './App.css';
 function App() {
     return (
       <div className="App" id="App">
-        <h2>
+        <header>
           Welcome to FlickPick!
-        </h2>
+        </header>
         <HomeView />
       </div>
     );
