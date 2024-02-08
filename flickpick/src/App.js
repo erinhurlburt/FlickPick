@@ -6,7 +6,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App" id="App">
-      <h2>Welcome to FlickPick!</h2>
+      <header>Welcome to FlickPick!</header>
       <HomeView />
     </div>
   );
