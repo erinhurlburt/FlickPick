@@ -1,0 +1,38 @@
+
+
+Evaluation and Feedback
+CMSI 4072 project ~ Spring 2024
+Anna Garren and Erin Hurlburt
+FlickPick project
+==============================
+
+Software Requirements Specification Document:
+---------------------------------------------
+-- Introduction Section
+   It would be helpful to have some sort of introduction to the document, to
+   make sure that the reader knows some context for the user stories.  It
+   doesn't have to be extensive, just a very high-level overview.
+
+-- Functional Requirements
+   This entire section is WONDERFUL!!  You two did a great job on these, and
+   your document is the first one in the list that actually used the Agile
+   requirements process!  I'm very VERY impressed.
+
+-- Performance Requirements
+   It would be good to have at least a couple of performance requirements to
+   specify some non-functional things that your application must do.  For
+   example, how long do you estimate the user will have to wait for results?
+
+-- Environment Requirements
+   This would be a very useful section to fill in, even if it's not in the
+   Agile format, just so that people will know what is needed to develop and
+   to deploy the application.  Even if it is designed to operate in a web
+   browser, it's helpful to know that fact.
+
+=============================================================================
+your score:  9% out of 10% which is an A-minus
+
+All in all, a GREAT first effort, you just need to fill in more specifics.
+
+Make the changes as suggested above, including many more requirements for
+the second submission and you'll get the full 10% on this document.
