@@ -1,0 +1,33 @@
+
+
+Evaluation and Feedback
+CMSI 4072 project ~ Spring 2024
+Anna Garren and Erin Hurlburt
+FlickPick project
+=============================================
+
+Software Development Plan Document:
+---------------------------------------------
+-- General Comments
+   This is an awesome job, ladies!  You have really done excellent work on
+   the document.  Nice bullet list in the deliverables section...
+
+-- Introduction Section
+   This section is intended to reflect not just the deliverable items from
+   the documentation but also the 'deliverables' that are actual project
+   work products.  However, you have that information elsewhere in your
+   document, so no need to duplicate it.  All good!
+
+-- Project Resources Section
+   Perfect ~ no further comments, nothing to add for the second submission.
+
+-- Project Organization Section
+   Perfect ~ no further comments, nothing to add for the second submission.
+
+-- Project Schedule Section
+   Perfect ~ no further comments, nothing to add for the second submission.
+
+=============================================================================
+your score:  10% out of 10% which is an A-plus
+
+You are good to go.  Full credit for both the first and second submission.
