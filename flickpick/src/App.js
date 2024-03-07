@@ -1,55 +1,61 @@
-//import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom"
 import { useEffect, useState } from "react";
-import { HomeView } from "./Views/HomeView";
+import { HomeView } from "./Views/HomeView/HomeView";
+import { SignInView } from "./Views/SignInView/SignInView";
+
 import "./App.css";
 
 function App() {
-  const [movies, setMovies] = useState([]);
-  const [search, setSearch] = useState("");
-  const [query, setQuery] = useState("Batman");
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
 
-  useEffect(() => {
-    getMovies();
-  }, [query]);
-
-  const getMovies = async () => {
-    const response = await fetch(
-      `https://www.omdbapi.com/?s=${query}&apikey=dd43f597`
-    );
-    const data = await response.json();
-    setMovies(data.Search);
-    console.log(data.Search);
-  };
-
-  const updateSearch = (e) => {
-    setSearch(e.target.value);
-  };
-
-  const getSearch = (e) => {
-    e.preventDefault();
-    setQuery(search);
-  };
+  // const handleLogout = () => {
+  //   setAccessToken(null)
+  //   setIsAuthenticated(false)
+  // }
 
   return (
+    <Router>
     <div className="App" id="App">
-      <h2>Welcome to FlickPick!</h2>
-      <form onSubmit={getSearch}>
-        <input
-          type="text"
-          value={search}
-          onChange={updateSearch}
-          placeholder="Search for a movie..."
+      <Routes>
+        <Route
+          path="/signin"
+          element={
+            isAuthenticated ? (
+              <Navigate to="/home" />
+            ) : (
+              <SignInView onSignIn={() => setIsAuthenticated(true)} />
+            )
+          }
         />
-        <button type="submit">Search</button>
-      </form>
-      {movies.map((movie) => (
-        <div key={movie.imdbID}>
-          <h3>{movie.Title}</h3>
-          <img src={movie.Poster} alt={movie.Title} />
-        </div>
-      ))}
+        <Route
+          path="/"
+          element={
+            isAuthenticated ? <Navigate to="/home" /> : <Navigate to="/signin" />
+          }
+        />
+        <Route
+          path="/home"
+          element={
+            <HomeView
+              //onLogout={handleLogout}
+              processSignIn={() => {
+                setIsAuthenticated(true)
+              }}
+            />
+          }
+        />
+        {/* <Route path="/search/:query" component={ResultsPage} />
+
+        <Route path="/about" element={<About />} />
+        <Route path="/team" element={<Devs />} />
+        <Route path="/faq" element={<FAQ />} /> */}
+      </Routes>
     </div>
+  </Router>
+    
   );
 }
 
 export default App;
+
+
