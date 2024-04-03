@@ -2,24 +2,24 @@
   text-align: center;
 }
 
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgb(108, 152, 255) 100%
-  );
+  background: black;
   text-align: center;
   margin: 0;
   transition: opacity 5s;
   font-family: "Oswald", sans-serif;
-  color: black;
+  color: rgb(251, 249, 249);
   grid-column: 1 / span 2;
   padding: 10px 5px;
 }
-
 
 .App-header {
   background-color: #282c34;
