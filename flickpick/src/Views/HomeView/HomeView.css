@@ -1,18 +1,57 @@
 body {
-  background-color: white;
+  background-color: #f9f9f9; /* Light gray */
+  font-family: Arial, sans-serif;
 }
 
 h2 {
-  color: black;
+  color: #333; /* Dark gray */
 }
 
-button {
-  background-color: white;
-  border-radius: 4px;
-  border: 2px solid red;
+.submit-button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+  cursor: pointer;
 }
 
 button:hover {
-  background-color: #04aa6d; /* Green */
-  color: white;
+  background-color: #ff5722; /* Darker orange red */
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie {
+  flex: 0 0 33.33%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.movie img {
+  width: 100%;
+  max-width: 300px; /* Adjust the maximum width as needed */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

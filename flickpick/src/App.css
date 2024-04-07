@@ -7,13 +7,24 @@
   pointer-events: none;
 }
 
+header img {
+  height: 150px;
+  margin-left: 15px;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+header img:hover {
+  transform: scale(1.05);
+}
+
 header {
   display: flex;
   justify-content: space-between;
   background: rgb(2, 0, 36);
   background: black;
   text-align: center;
-  margin: 0;
+  margin-bottom: 20px;
   transition: opacity 5s;
   font-family: "Oswald", sans-serif;
   color: rgb(251, 249, 249);
@@ -34,4 +45,42 @@ header {
 
 .App-link {
   color: #61dafb;
+}
+
+.menu-button {
+  background: #ff5722;
+  box-shadow: 0px 10px 30px 0px rgba(82, 63, 105, 0.05);
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: unset;
+  margin: unset;
+}
+
+li {
+  padding: 14px;
+  transition: all linear 0.3s;
+}
+
+li:hover {
+  background: gray;
+  cursor: pointer;
+  color: #fff;
+}
+
+.dropdown-menu {
+  background: #fff;
+  color: black;
+  box-shadow: 0px 10px 30px 0px rgba(82, 63, 105, 0.05);
+  transition: all linear 0.3s;
+  border-radius: 5px;
+  margin-right: 20px;
 }

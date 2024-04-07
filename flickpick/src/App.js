@@ -9,22 +9,42 @@ import { HomeView } from "./Views/HomeView/HomeView";
 import { SignInView } from "./Views/SignInView/SignInView";
 
 import logo from "./logo.png";
+import DropdownMenu from "./Views/HomeView//DropdownMenu";
 import "./App.css";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [accessToken, setAccessToken] = useState(null);
 
-  // const handleLogout = () => {
-  //   setAccessToken(null)
-  //   setIsAuthenticated(false)
-  // }
+  const handleLogout = () => {
+    setAccessToken(null);
+    setIsAuthenticated(false);
+  };
+
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+
+  const handleMouseEnter = () => {
+    setDropdownVisible(true);
+  };
+
+  const handleMouseLeave = () => {
+    setDropdownVisible(false);
+  };
 
   return (
     <Router>
       <div className="App" id="App">
         <header>
           <img src={logo} height={100} />
-          <h1>Menu</h1>
+          <div
+            className="menu"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <button className="menu-button">Menu</button>
+            {/* <DropdownMenu /> */}
+            {isDropdownVisible && <DropdownMenu onLogout={handleLogout} />}
+          </div>
         </header>
         <Routes>
           <Route
@@ -51,7 +71,7 @@ function App() {
             path="/home"
             element={
               <HomeView
-                //onLogout={handleLogout}
+                onLogout={handleLogout}
                 processSignIn={() => {
                   setIsAuthenticated(true);
                 }}
