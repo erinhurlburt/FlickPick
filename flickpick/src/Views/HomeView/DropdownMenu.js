@@ -13,6 +13,7 @@ const DropdownMenu = ({ onLogout }) => {
         <li>Movie of the Day</li>
         <li>
           <button
+            className="signout-button"
             onClick={() => {
               onLogout();
               navigate("/signin");

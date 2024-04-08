@@ -84,6 +84,9 @@ function App() {
         <Route path="/team" element={<Devs />} />
         <Route path="/faq" element={<FAQ />} /> */}
         </Routes>
+        <div class="footer">
+          <p></p>
+        </div>
       </div>
     </Router>
   );

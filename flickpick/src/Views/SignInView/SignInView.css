@@ -1,0 +1,36 @@
+.signIn-button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-left: 85px;
+}
+
+.account-button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+input[type="email"] {
+  width: 15%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  margin-left: 43px;
+}
+
+input[type="password"] {
+  width: 15%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  margin-left: 15px;
+}
