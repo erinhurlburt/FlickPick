@@ -11,6 +11,7 @@ import { SignInView } from "./Views/SignInView/SignInView";
 import logo from "./logo.png";
 import DropdownMenu from "./Views/HomeView//DropdownMenu";
 import "./App.css";
+import MovieView from "./Views/MovieView/MovieView";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -71,13 +72,14 @@ function App() {
             path="/home"
             element={
               <HomeView
-                onLogout={handleLogout}
+                // onLogout={handleLogout}
                 processSignIn={() => {
                   setIsAuthenticated(true);
                 }}
               />
             }
           />
+          <Route path="/movie/:imdbID" element={<MovieView />} />
           {/* <Route path="/search/:query" component={ResultsPage} />
 
         <Route path="/about" element={<About />} />

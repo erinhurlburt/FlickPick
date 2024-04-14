@@ -2,17 +2,19 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./HomeView.css";
+import MovieView  from "../MovieView/MovieView";
 
-export function HomeView({ onLogout, processSignIn }) {
+export function HomeView({ processSignIn }) {
   const navigate = useNavigate();
   const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("Batman");
+  const [selectedMovieId, setSelectedMovieId] = useState("");
 
   useEffect(() => {
     processSignIn();
     //new URLSearchParams(window.location.search)
-  }, []);
+  }, [processSignIn]);
 
   useEffect(() => {
     getMovies();
@@ -36,6 +38,12 @@ export function HomeView({ onLogout, processSignIn }) {
     setQuery(search);
   };
 
+  const handleClick = (imdbID) => {
+    console.log(imdbID);
+    setSelectedMovieId(imdbID);
+    navigate(`/movie/${imdbID}`);
+  };
+
   return (
     <div className="App" id="App">
       <form onSubmit={getSearch} style={{ marginBottom: "20px" }}>
@@ -53,11 +61,14 @@ export function HomeView({ onLogout, processSignIn }) {
       <div className="movie-container">
         {movies.map((movie) => (
           <div className="movie" key={movie.imdbID}>
-            <h3>{movie.Title}</h3>
-            <img src={movie.Poster} alt={movie.Title} />
+            {movie.Title}
+            <button className="movie-title" onClick={() => handleClick(movie.imdbID)}>
+              <img src={movie.Poster} alt={movie.Title} />
+            </button>
           </div>
         ))}
       </div>
+      {selectedMovieId && <MovieView imdbID={selectedMovieId} />}
     </div>
   );
 }
